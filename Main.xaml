@@ -1,0 +1,151 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="464.8,1518.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:da="clr-namespace:DocumentSign.Activities;assembly=DocumentSign.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usa="clr-namespace:UiPath.Shared.Activities;assembly=DocumentSign.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="44">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>DocumentFormat.OpenXml.InkML</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>DocumentSign.Enums</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>DocumentSign.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="44">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>DocumentFormat.OpenXml</AssemblyReference>
+      <AssemblyReference>DocumentSign</AssemblyReference>
+      <AssemblyReference>DocumentSign.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="475.2,1453.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="qntEnv" />
+      <Variable x:TypeArguments="x:Int32" Default="5" Name="i" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <da:SignScope ContinueOnError="{x:Null}" TargetAccountID="{x:Null}" sap2010:Annotation.AnnotationText="" AuthenticationServer="Production OAUTH" ClientD="323320b3-2d3b-4804-bbdb-85313459d3f1" DisplayName="Sign Scope" sap:VirtualizedContainerService.HintSize="433.6,1360.8" sap2010:WorkflowViewState.IdRef="SignScope_1" PrivateKey="-----BEGIN RSA PRIVATE KEY-----&#xA;MIIEowIBAAKCAQEAoKrZn/k7p27YSwiBhNMnjSKMRfXDQ5M+9GZlDQ11bAGgsT1y&#xA;IBobv44HOFXKMDOGEiHclyBmxW1gLZRv/bJGN1ZLEpbQLO1h8Zpb0FePJA1Vdr32&#xA;oumrJKooG7nV3wJK3iB3zYqfhTz2ik8uY0yG85QjwLCzfPa0pBSrIxlQ9M+vxq8o&#xA;l9OBUWZyQ4EBNjCQVIO0C1KlMzyGIOUdGo3lr3gENXkz+nkUXk/uUw+omENOm3le&#xA;PkKWSImksByRhPv+HQAPzL7/i7Uqxm9ujarL+idpL80U3OlGfJU1fLa8l8+7WVIy&#xA;mNi4dDhpiaGQFFsemU4gK4oD2BFHaMbjR+5auwIDAQABAoIBAAp/Xzy+khE8gtFU&#xA;OvIswbbM/RFNH3b41fIuBog1yuhFqvQpqZ1DV3DKnNoncNB5bVcd80XEjjJ0FQal&#xA;XjPbRA81ii4qwGtPD0kz5q/UKLwYSu85NjYqwk3g+EHngHvTsISW5nz9g7K26vza&#xA;c5N1WpPrp/JdGT0e+WqHFy9x5gI4vNXhrxSCEEVSaJECDYjym7YAlnrgfvXUd0uN&#xA;f9f2xgAXQ2ISaPN+om13cmexQskoeioJMR2eSNr53emkkEhyYPHdz2DEdnabs1+M&#xA;nHtkM3RplM2MdUtUZvJjDiPfbbNX559053HYhquIYZ/6j2aBze96zwQVmQ8uddKr&#xA;g1T6etECgYEA7RoIXVcVKKcKl5MD5ROfL4ux989n2UmPTfFdBfBPlnD88unDqERH&#xA;yOoIsskEZQwa52FT1/MlAkk7vda/RMB3N1yElo9wb/KkjpiqxgXj+/VGAaGb/Zuo&#xA;f2NmaO344+F+j94PFI+lEQLKxYPgzPNMaBIAN4sIFDBUKad+HcdOvUcCgYEArXk0&#xA;i/0eMfYgMgK3TuSAmU4AspSzFiV+/4Ibb+sSycB/Z054vi0R+NM5fVq20ZJrZzJL&#xA;HtER85QBrq4rzV1o1VMmYnyRr5QnFyRStLn0jrJvQwTZg9ZgFq9c6/L3n97BY3qD&#xA;ZGsDE+PLUIp3BkOKj7YDBy7/p93QL/tQyFe94O0CgYA5CA4DBbNdN/DgTMifDX04&#xA;3o1MYmNEbOE/ilMp3ogGU99EPt6FVwc9WK4G8ztPYv4Fse+M/jtktWDdZQ5U50bF&#xA;1kc+P/p3sxHKCwbo4vnX3UOdmNYAxrRdD/fOPY+koNTknjFabMLzuIw1vmcQZWV3&#xA;kvziX1ruIEHeUx+O4iYaeQKBgBQ5snez3kZi9OP/zxGCsL+vCYPItIybeJAfwkUt&#xA;OjaNnA0WaBt8M8E4F1bXMcODd8RDZ+DC7X3hvsR4CCFch7F/jVUkQvQeqOQY1w+9&#xA;MpdElJZSxW2KnA9pCMN1w4s/NHr9uL4HgAdcosLUMgZn74rL5NR8lVAkG3bMrWF+&#xA;YWQNAoGBANU9ooR991fnVCmvV79AsfZM5JRUYcOIQ5Tc/NSY9GH0AUKbNboO9z3X&#xA;3SVuqoX3nVWiIuAaTJCpigl2t2BRsvpKgLuTODw03cnSlNppM4kBkvZ5bUP8V4rb&#xA;d6QcA8g7LrfQLsdvcmWNFGJR+KKjcHNBCZtLMzS9F6PbhAWVRoHD&#xA;-----END RSA PRIVATE KEY-----" RedirectUri="https://www.docusign.com.br/" UserID="472f1714-e29c-4488-a139-81353cce9f2c">
+      <da:SignScope.Body>
+        <ActivityAction x:TypeArguments="usa:IObjectContainer">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="usa:IObjectContainer" Name="ScopeActivity" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="375.2,1243.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="EnvelopeId" />
+              <Variable x:TypeArguments="x:String" Name="Envelopeid2" />
+              <Variable x:TypeArguments="x:String" Name="Envelopeid3" />
+              <Variable x:TypeArguments="x:Object" Name="Document" />
+              <Variable x:TypeArguments="x:String" Name="DocumentID" />
+              <Variable x:TypeArguments="x:String" Name="Envelopeid4" />
+              <Variable x:TypeArguments="x:String" Name="Envelopeid5" />
+              <Variable x:TypeArguments="x:Object" Name="recipient" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <da:CreateDocument ContinueOnError="{x:Null}" DisplayName="Create Document" Document="[Document]" DocumentId="[DocumentID]" DocumentPath="C:\Users\igor_ritzmann\Documents\UiPath\GoLive\Assinaturas.pdf" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="CreateDocument_3" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[DocumentID]" />
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Atividades Ignoradas" sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <da:CreateRecipient ContinueOnError="{x:Null}" SignatureAnchor="{x:Null}" AnchorOption="IgnoreAnchorIfNotPresent" DisplayName="Create Recipient" DocumentId="[DocumentID]" EmailAddress="igor_ritzmann@sicredi.com.br" FullName="Igor R" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="CreateRecipient_4" Recipient="[recipient]" Role="Signer" RoutingOrder="1" XOffset="0" YOffset="0" />
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Atividades Ignoradas" sap:VirtualizedContainerService.HintSize="375.2,227.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <da:SendEnvelope ContinueOnError="{x:Null}" Envelope="{x:Null}" EnvelopeID="{x:Null}" EnvelopeStatus="{x:Null}" DisplayName="Send Envelope" Documents="[Document]" EmailSubject="Golive" sap:VirtualizedContainerService.HintSize="333.6,134.4" sap2010:WorkflowViewState.IdRef="SendEnvelope_1" Recipients="[recipient]" Status="sent" />
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <da:GetEnvelopeInformation ContinueOnError="{x:Null}" CreatedDateTime="{x:Null}" DeclinedDateTime="{x:Null}" DeletedDateTime="{x:Null}" DeliveredDateTime="{x:Null}" DocumentIds="{x:Null}" ExpireDateTime="{x:Null}" JsonData="{x:Null}" Recipients="{x:Null}" SentDateTime="{x:Null}" StatusChangedDateTime="{x:Null}" VoidedDateTime="{x:Null}" VoidedReason="{x:Null}" EnvelopeId="279c073e-3c64-4c37-bb63-af2bfa543905" EnvelopeStatus="[EnvelopeId]" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="GetEnvelopeInformation_11" />
+            <da:GetEnvelopeInformation ContinueOnError="{x:Null}" CreatedDateTime="{x:Null}" DeclinedDateTime="{x:Null}" DeletedDateTime="{x:Null}" DeliveredDateTime="{x:Null}" DocumentIds="{x:Null}" ExpireDateTime="{x:Null}" JsonData="{x:Null}" Recipients="{x:Null}" SentDateTime="{x:Null}" StatusChangedDateTime="{x:Null}" VoidedDateTime="{x:Null}" VoidedReason="{x:Null}" EnvelopeId="02e3899b-d6df-42f9-8c2f-ce369e121b67" EnvelopeStatus="[Envelopeid2]" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="GetEnvelopeInformation_15" />
+            <da:GetEnvelopeInformation ContinueOnError="{x:Null}" CreatedDateTime="{x:Null}" DeclinedDateTime="{x:Null}" DeletedDateTime="{x:Null}" DeliveredDateTime="{x:Null}" DocumentIds="{x:Null}" ExpireDateTime="{x:Null}" JsonData="{x:Null}" Recipients="{x:Null}" SentDateTime="{x:Null}" StatusChangedDateTime="{x:Null}" VoidedDateTime="{x:Null}" VoidedReason="{x:Null}" EnvelopeId="b3b22d80-a116-4df5-a308-e2c78dcbbf21" EnvelopeStatus="[Envelopeid3]" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="GetEnvelopeInformation_14" />
+            <da:GetEnvelopeInformation ContinueOnError="{x:Null}" CreatedDateTime="{x:Null}" DeclinedDateTime="{x:Null}" DeletedDateTime="{x:Null}" DeliveredDateTime="{x:Null}" DocumentIds="{x:Null}" ExpireDateTime="{x:Null}" JsonData="{x:Null}" Recipients="{x:Null}" SentDateTime="{x:Null}" StatusChangedDateTime="{x:Null}" VoidedDateTime="{x:Null}" VoidedReason="{x:Null}" EnvelopeId="a2ba4cbe-f5cc-42f8-abaa-9236a9275100" EnvelopeStatus="[Envelopeid4]" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="GetEnvelopeInformation_12" />
+            <da:GetEnvelopeInformation ContinueOnError="{x:Null}" CreatedDateTime="{x:Null}" DeclinedDateTime="{x:Null}" DeletedDateTime="{x:Null}" DeliveredDateTime="{x:Null}" DocumentIds="{x:Null}" ExpireDateTime="{x:Null}" JsonData="{x:Null}" Recipients="{x:Null}" SentDateTime="{x:Null}" StatusChangedDateTime="{x:Null}" VoidedDateTime="{x:Null}" VoidedReason="{x:Null}" EnvelopeId="697612ae-ce83-4117-9909-0f63e3f8c5a5" EnvelopeStatus="[Envelopeid5]" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="GetEnvelopeInformation_13" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[EnvelopeId+Envelopeid2+Envelopeid3+Envelopeid4+Envelopeid5]" />
+          </Sequence>
+        </ActivityAction>
+      </da:SignScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </da:SignScope>
+  </Sequence>
+</Activity>
